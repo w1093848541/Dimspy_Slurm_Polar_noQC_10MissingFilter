@@ -26,7 +26,7 @@ echo "Starting Missing Value Filter"
 dimspy mv-sample-filter \
 --input ../4_SampleFilter/sampleFilter.* \
 --output missingVals.$SLURM_JOB_ID \
---max-fraction 0.8
+--max-fraction 0.85
 
 echo "Missing Values Filter Complete"
 
@@ -48,7 +48,7 @@ dimspy hdf5-pm-to-txt \
 --delimiter tab \
 --comprehensive \
 --attribute_name intensity \
---representation-samples rows
+--representation-samples columns
 
 echo "Conversions Complete"
 echo "Step Complete"
